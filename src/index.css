@@ -1,6 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-heading dark:text-dark-heading font-medium;
+  }
+
+  a {
+    @apply text-link dark:text-dark-link hover:text-link-hover hover:dark:text-dark-link-hover transition-colors duration-300;
+  }
+  
+  section {
+    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-6 border-b border-muted dark:border-dark-muted pb-2;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md bg-link-hover dark:bg-dark-link-hover text-background dark:text-dark-background font-medium transition-all hover:opacity-90;
+  }
+
+  .card {
+    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover rounded-lg p-6 shadow-md hover:shadow-lg transition-colors duration-300;
+  }
+}
+
+/* Reset que não interfere no Tailwind */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -24,14 +73,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {

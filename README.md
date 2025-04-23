@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+# Portfólio de Lucas Pincho
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site de portfólio pessoal inspirado no design de [Brittany Chiang](https://brittanychiang.com).
 
-Currently, two official plugins are available:
+## 🚀 Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- TypeScript
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- classnames
 
-## Expanding the ESLint configuration
+## 🎨 Design e Layout
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O site possui uma estrutura de layout dividida:
+- **Sidebar esquerda (48%)**: Fixa com informações pessoais e navegação
+- **Conteúdo direito (52%)**: Rolável com seções detalhadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Implementa temas claro e escuro com alternância e persistência via localStorage.
+
+## 🛠️ Instalação
+
+```bash
+# Clonar o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# Entrar no diretório
+cd myportfolio
+
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Build e Deploy
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Gerar build de produção
+npm run build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# Visualizar build localmente
+npm run preview
 ```
+
+Este projeto está configurado para fácil deploy no Vercel.
+
+## 🧩 Estrutura do Projeto
+
+```
+/
+├── public/          # Arquivos públicos
+├── src/             # Código fonte
+│   ├── assets/      # Recursos estáticos 
+│   ├── components/  # Componentes React
+│   ├── hooks/       # Custom hooks
+│   ├── App.tsx      # Componente principal
+│   ├── main.tsx     # Ponto de entrada
+│   └── index.css    # Estilos globais
+└── ...              # Arquivos de configuração
+```
+
+## 🎯 Funcionalidades
+
+- Design responsivo para desktop e mobile
+- Alternância entre temas claro e escuro
+- Animações suaves com Framer Motion
+- Navegação por âncoras com rolagem suave
+
+## 📝 Licença
+
+MIT
