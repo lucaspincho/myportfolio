@@ -35,7 +35,7 @@ export default function Contact() {
               id="name"
               name="name"
               placeholder="Seu nome"
-              className="w-full p-3 rounded-lg bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300"
+              className="w-full p-3 rounded-lg subsection-item border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300"
               required
             />
           </div>
@@ -47,7 +47,7 @@ export default function Contact() {
               id="email"
               name="email"
               placeholder="seu.email@exemplo.com"
-              className="w-full p-3 rounded-lg bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300"
+              className="w-full p-3 rounded-lg subsection-item border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300"
               required
             />
           </div>
@@ -59,7 +59,7 @@ export default function Contact() {
               name="message"
               rows={5}
               placeholder="Sua mensagem..."
-              className="w-full p-3 rounded-lg bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300 resize-none"
+              className="w-full p-3 rounded-lg subsection-item border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300 resize-none"
               required
             ></textarea>
           </div>

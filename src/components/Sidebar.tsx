@@ -30,9 +30,9 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
 
   const sidebarContent = (
     <>
-      <div className="mb-8 lg:pt-10">
+      <div className="mb-10 lg:pt-10">
         <motion.h1 
-          className="text-3xl md:text-4xl font-bold"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -40,7 +40,7 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
           Lucas Pincho
         </motion.h1>
         <motion.p 
-          className="text-muted dark:text-dark-muted mt-2 text-lg"
+          className="text-muted dark:text-dark-muted mt-3 text-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -137,12 +137,8 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
   }
 
   return (
-    <div className="relative w-[40%]">
-      <aside className="fixed h-screen md:p-6 lg:pt-10 flex flex-col transition-all">
-        <div className="max-w-xs md:pl-2">
-          {sidebarContent}
-        </div>
-      </aside>
+    <div className="md:sticky md:top-10 pr-4 md:pr-8">
+      {sidebarContent}
     </div>
   );
 } 

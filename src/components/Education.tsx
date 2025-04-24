@@ -11,13 +11,13 @@ type EducationItemProps = {
 function EducationItem({ institution, degree, period, description, delay }: EducationItemProps) {
   return (
     <motion.div 
-      className="mb-8 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2"
+      className="mb-8 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
     >
-      <div className="absolute w-4 h-4 bg-link-hover dark:bg-dark-link-hover rounded-full -left-[9px] top-1"></div>
+      <div className="absolute w-4 h-4 bg-link-hover dark:bg-dark-link-hover rounded-full -left-[9px] top-5"></div>
       <h3 className="text-xl font-medium">{degree}</h3>
       <p className="text-muted dark:text-dark-muted mb-2">
         {institution} | {period}

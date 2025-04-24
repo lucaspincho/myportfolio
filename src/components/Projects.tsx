@@ -13,7 +13,7 @@ type ProjectCardProps = {
 function ProjectCard({ title, description, tags, githubUrl, liveUrl, index }: ProjectCardProps) {
   return (
     <motion.div 
-      className="card hover:-translate-y-2 cursor-pointer relative"
+      className="subsection-item hover:-translate-y-2 cursor-pointer relative p-5 lg:p-6 shadow-md hover:shadow-lg rounded-lg"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -93,7 +93,7 @@ export default function Projects() {
         Projetos
       </motion.h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-8">
         {projects.map((project, index) => (
           <ProjectCard 
             key={index}

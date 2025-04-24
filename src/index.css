@@ -22,7 +22,7 @@
   }
   
   section {
-    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover transition-colors duration-300;
+    @apply bg-transparent transition-colors duration-300;
   }
 }
 
@@ -40,7 +40,11 @@
   }
 
   .card {
-    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover rounded-lg p-6 shadow-md hover:shadow-lg transition-colors duration-300;
+    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover rounded-lg p-5 lg:p-6 shadow-md hover:shadow-lg transition-colors duration-300;
+  }
+  
+  .subsection-item {
+    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover transition-colors duration-300;
   }
 }
 

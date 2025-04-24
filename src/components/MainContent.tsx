@@ -6,8 +6,8 @@ import Contact from './Contact';
 
 export default function MainContent() {
   return (
-    <main className="ml-0 md:ml-[40%] w-full md:w-[60%] py-20 md:py-20 lg:pt-20 transition-all">
-      <div className="max-w-none mx-auto px-4 md:px-6 lg:px-6">
+    <main className="w-full py-20 lg:pt-20 transition-all">
+      <div className="w-full pl-0 md:pl-4">
         <About />
         <Experience />
         <Projects />

@@ -13,13 +13,13 @@ type ExperienceItemProps = {
 function ExperienceItem({ company, position, period, description, url, delay }: ExperienceItemProps) {
   return (
     <motion.div 
-      className="mb-10 relative border-l-2 border-light-detail dark:border-dark-detail pl-6 pb-2"
+      className="mb-10 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
     >
-      <div className="absolute w-4 h-4 bg-light-highlight dark:bg-dark-highlight rounded-full -left-[9px] top-1"></div>
+      <div className="absolute w-4 h-4 bg-link-hover dark:bg-dark-link-hover rounded-full -left-[9px] top-5"></div>
       <h3 className="text-xl font-medium flex items-center gap-2">
         {position}
         {url && (
@@ -28,7 +28,7 @@ function ExperienceItem({ company, position, period, description, url, delay }: 
           </a>
         )}
       </h3>
-      <p className="text-light-detail dark:text-dark-detail mb-2">
+      <p className="text-muted dark:text-dark-muted mb-2">
         {company} | {period}
       </p>
       <p>{description}</p>
