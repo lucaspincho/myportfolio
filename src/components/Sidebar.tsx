@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi';
 import classNames from 'classnames';
+import { useActiveSection } from '../hooks/useActiveSection';
 
 type SidebarProps = {
   isMobile: boolean;
@@ -9,6 +10,8 @@ type SidebarProps = {
 };
 
 export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: SidebarProps) {
+  const activeSection = useActiveSection();
+
   const navItems = [
     { label: 'Sobre', href: '#about' },
     { label: 'Experiência', href: '#experience' },
@@ -29,7 +32,7 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
   });
 
   const sidebarContent = (
-    <>
+    <div className="flex flex-col h-full">
       <div className="mb-10 lg:pt-10">
         <motion.h1 
           className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight"
@@ -51,28 +54,42 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
 
       <nav>
         <ul className={linksContainerClass}>
-          {navItems.map((item, index) => (
-            <motion.li 
-              key={item.href}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1 * (index + 3) }}
-            >
-              <a 
-                href={item.href}
-                className="relative text-lg group flex items-center"
-                onClick={() => isMobile && toggleMobileMenu()}
+          {navItems.map((item, index) => {
+            const isActive = activeSection === item.href.substring(1);
+            
+            return (
+              <motion.li 
+                key={item.href}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * (index + 3) }}
               >
-                <span className="w-6 h-px bg-muted dark:bg-dark-muted mr-2 transform group-hover:w-8 transition-all" />
-                {item.label}
-              </a>
-            </motion.li>
-          ))}
+                <a 
+                  href={item.href}
+                  className={classNames(
+                    "relative text-lg group flex items-center",
+                    isActive ? "font-medium" : ""
+                  )}
+                  onClick={() => isMobile && toggleMobileMenu()}
+                >
+                  <span 
+                    className={classNames(
+                      "h-px mr-2 transform transition-all",
+                      isActive ? "w-8 bg-primary dark:bg-dark-primary" : "w-6 bg-muted dark:bg-dark-muted group-hover:w-8"
+                    )}
+                  />
+                  <span className={isActive ? "text-primary dark:text-dark-primary" : ""}>
+                    {item.label}
+                  </span>
+                </a>
+              </motion.li>
+            );
+          })}
         </ul>
       </nav>
 
       <motion.div 
-        className="mt-auto pt-8"
+        className="mt-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
@@ -92,7 +109,7 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
           </a>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 
   // Mobile hamburger menu
@@ -136,9 +153,5 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
     );
   }
 
-  return (
-    <div className="md:sticky md:top-10 pr-4 md:pr-8">
-      {sidebarContent}
-    </div>
-  );
+  return sidebarContent;
 } 

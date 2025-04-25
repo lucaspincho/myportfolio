@@ -17,6 +17,7 @@ export default {
         'link-hover': '#38BDF8',
         muted: '#94A3B8',
         'section-hover': '#E2E8F0',
+        primary: '#38BDF8',
         dark: {
           background: '#0A0E14',
           foreground: '#8294AD',
@@ -25,6 +26,7 @@ export default {
           'link-hover': '#38BDF8',
           muted: '#64748B',
           'section-hover': '#1E293B',
+          primary: '#38BDF8'
         }
       },
     },
