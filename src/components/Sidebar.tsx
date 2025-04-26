@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiTwitter, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import classNames from 'classnames';
 import { useActiveSection } from '../hooks/useActiveSection';
 
@@ -63,6 +63,7 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 * (index + 3) }}
+                className="w-fit"
               >
                 <a 
                   href={item.href}
@@ -98,11 +99,11 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
           <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
             <FiGithub className="w-5 h-5" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter">
-            <FiTwitter className="w-5 h-5" />
-          </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <FiLinkedin className="w-5 h-5" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <FiInstagram className="w-5 h-5" />
           </a>
           <a href="mailto:exemplo@email.com" target="_blank" rel="noreferrer" aria-label="Email">
             <FiMail className="w-5 h-5" />
