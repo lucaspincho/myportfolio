@@ -9,7 +9,6 @@ import CursorGlow from './components/CursorGlow'
 function App() {
   const { theme, toggleTheme } = useTheme()
   const [isMobile, setIsMobile] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -41,24 +40,23 @@ function App() {
       
       <div className="flex-1 w-full px-6 md:px-10 lg:px-16 xl:px-20 relative">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 max-w-6xl mx-auto">
+          {/* Desktop sidebar */}
           <aside className="hidden md:block md:col-span-4 lg:col-span-5 sticky top-14 self-start" style={{ height: 'calc(100vh - 4rem)' }}>
             <Sidebar 
-              isMobile={isMobile} 
-              mobileMenuOpen={mobileMenuOpen} 
-              toggleMobileMenu={() => setMobileMenuOpen(!mobileMenuOpen)}
+              isMobile={false}
             />
           </aside>
           
-          {/* Versão mobile da sidebar */}
+          {/* Versão mobile da sidebar: agora fica no topo */}
           {isMobile && (
-            <Sidebar 
-              isMobile={isMobile} 
-              mobileMenuOpen={mobileMenuOpen} 
-              toggleMobileMenu={() => setMobileMenuOpen(!mobileMenuOpen)}
-            />
+            <div className="col-span-1 pt-16 pb-10 overflow-x-auto">
+              <Sidebar 
+                isMobile={true}
+              />
+            </div>
           )}
           
-          <main className="md:col-span-8 lg:col-span-7">
+          <main className={`${isMobile ? 'col-span-1 pt-4' : 'md:col-span-8 lg:col-span-7'}`}>
             <MainContent />
           </main>
         </div>

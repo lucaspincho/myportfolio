@@ -21,7 +21,7 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <p className="text-lg">
+        <p className="text-base">
           Estou sempre aberto para discutir novos projetos, oportunidades de trabalho ou parcerias.
           Seja para uma conversa rápida ou para discutir um projeto em detalhes, preencha o formulário
           abaixo ou entre em contato diretamente através do meu email: <a href="mailto:lucas@pincho.com.br" className="text-link-hover dark:text-dark-link-hover hover:underline">lucas@pincho.com.br</a>.

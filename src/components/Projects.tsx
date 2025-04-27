@@ -53,32 +53,32 @@ export default function Projects() {
       title: "Futsallink: Aplicativo de Conexão Esportiva",
       description: "Desenvolvimento front-end de um app para conectar clubes e jogadores de futsal, com algoritmo de matching e notificações em tempo real.",
       tags: ["Flutter", "Firebase", "APIs REST"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      projectUrl: "#"
+      githubUrl: "https://github.com/lucaspincho/Futsallink",
+      liveUrl: "https://github.com/lucaspincho/Futsallink",
+      projectUrl: "https://github.com/lucaspincho/Futsallink"
     },
     {
       title: "YourDP: Sistema de Gestão de RH",
       description: "Criação de um app multiplataforma para gestão de ponto, férias e folha de pagamento. Dashboard de analytics com integração em tempo real a APIs e cloud.",
       tags: ["React Native", "Node.js", "Cloudinary", "Vercel"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      projectUrl: "#"
+      githubUrl: "https://github.com/Caliel-Albuquerque/ReactNative-YourDP",
+      liveUrl: "https://github.com/Caliel-Albuquerque/ReactNative-YourDP",
+      projectUrl: "https://github.com/Caliel-Albuquerque/ReactNative-YourDP"
     },
     {
       title: "Modelo Preditivo de Custos de Plano de Saúde",
       description: "Modelo de machine learning para previsão de custos de planos de saúde com 89% de acurácia. Análise de viés e documentação técnica para uso ético de IA.",
       tags: ["Python", "Scikit-Learn", "Pandas", "Colab"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      projectUrl: "#"
+      githubUrl: "https://colab.research.google.com/drive/1qr0fzQpBSzOY9Ut6O5i2fUYFnVTXNHBM?usp=sharing",
+      liveUrl: "https://colab.research.google.com/drive/1qr0fzQpBSzOY9Ut6O5i2fUYFnVTXNHBM?usp=sharing",
+      projectUrl: "https://colab.research.google.com/drive/1qr0fzQpBSzOY9Ut6O5i2fUYFnVTXNHBM?usp=sharing"
     },
     {
       title: "DoubleScout: Plataforma de Busca Avançada de Jogadores",
       description: "Desenvolvimento de uma ferramenta web interativa para encontrar jogadores que atendem a combinações específicas de critérios. Implementação de sistema dinâmico de busca cruzada com filtros temporais e integração com múltiplas APIs esportivas.",
       tags: ["React", "Node.js", "PostgreSQL", "TailwindCSS", "APIs esportivas"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      githubUrl: null,
+      liveUrl: null,
       projectUrl: "#"
     },
   ];
@@ -95,7 +95,7 @@ export default function Projects() {
         Projetos
       </motion.h2>
       
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-8">
+      <div className="grid grid-cols-1 gap-8 mt-8 max-w-4xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard 
             key={index}
