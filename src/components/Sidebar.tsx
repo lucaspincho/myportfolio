@@ -79,7 +79,7 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
                       isActive ? "w-8 bg-primary dark:bg-dark-primary" : "w-6 bg-muted dark:bg-dark-muted group-hover:w-8"
                     )}
                   />
-                  <span className={isActive ? "text-primary dark:text-dark-primary" : ""}>
+                  <span className={isActive ? "text-primary dark:text-dark-primary" : "text-[#0a0e14] dark:text-dark-link group-hover:text-link-hover dark:group-hover:text-dark-link-hover"}>
                     {item.label}
                   </span>
                 </a>
@@ -96,16 +96,16 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
         transition={{ delay: 0.8 }}
       >
         <div className="flex gap-5">
-          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiGithub className="w-6 h-6" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiLinkedin className="w-6 h-6" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiInstagram className="w-6 h-6" />
           </a>
-          <a href="mailto:exemplo@email.com" target="_blank" rel="noreferrer" aria-label="Email">
+          <a href="mailto:exemplo@email.com" target="_blank" rel="noreferrer" aria-label="Email" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiMail className="w-6 h-6" />
           </a>
         </div>

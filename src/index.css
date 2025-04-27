@@ -44,7 +44,11 @@
   }
   
   .subsection-item {
-    @apply bg-transparent hover:bg-section-hover dark:hover:bg-dark-section-hover transition-colors duration-300;
+    @apply bg-transparent hover:bg-section-hover/60 dark:hover:bg-dark-section-hover/70 transition-all duration-300 hover:shadow-md transform hover:-translate-y-1;
+  }
+
+  .form-input {
+    @apply bg-transparent hover:bg-section-hover/60 dark:hover:bg-dark-section-hover/70 transition-all duration-300 focus:shadow-md;
   }
 }
 

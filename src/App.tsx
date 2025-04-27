@@ -30,7 +30,7 @@ function App() {
     <div className="flex flex-col min-h-screen antialiased">
       <CursorGlow 
         size={500} 
-        opacity={0.08} 
+        opacity={0.20} 
         lightColor="#38BDF8" 
         darkColor="#38BDF8" 
       />

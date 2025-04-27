@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FiExternalLink } from 'react-icons/fi';
 
 type EducationItemProps = {
   institution: string;
@@ -12,7 +13,7 @@ type EducationItemProps = {
 function EducationItem({ institution, degree, period, description, detailUrl = "#", delay }: EducationItemProps) {
   return (
     <motion.div 
-      className="mb-8 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4 cursor-pointer hover:bg-section-hover/30 dark:hover:bg-dark-section-hover/40 group"
+      className="mb-8 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4 cursor-pointer group"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
@@ -23,6 +24,7 @@ function EducationItem({ institution, degree, period, description, detailUrl = "
       <div className="relative z-10">
         <h3 className="text-xl font-medium flex items-center gap-2 group-hover:text-link-hover dark:group-hover:text-dark-link-hover">
           {institution}
+          <FiExternalLink className="w-4 h-4 group-hover:text-link-hover dark:group-hover:text-dark-link-hover" />
         </h3>
         <p className="text-muted dark:text-dark-muted mb-2">
           {degree} | {period}
@@ -49,18 +51,11 @@ export default function Education() {
       period: "2019 - 2021",
       description: "Pesquisa em arquiteturas de software escaláveis e metodologias ágeis de desenvolvimento.",
       detailUrl: "#"
-    },
-    {
-      institution: "Bootcamp de Desenvolvimento Web",
-      degree: "Certificação Full Stack",
-      period: "2018",
-      description: "Programa intensivo focado em tecnologias web modernas e boas práticas de desenvolvimento.",
-      detailUrl: "#"
     }
   ];
 
   return (
-    <section id="education" className="mb-24 md:mb-32 p-4 rounded-lg">
+    <section id="education" className="mb-16 md:mb-24 p-4 rounded-lg">
       <motion.h2 
         className="section-title"
         initial={{ opacity: 0, y: 20 }}

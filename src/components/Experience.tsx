@@ -14,10 +14,10 @@ type ExperienceItemProps = {
 function ExperienceItem({ company, position, period, description, url, detailUrl = "#", delay }: ExperienceItemProps) {
   return (
     <motion.div 
-      className="mb-10 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4 cursor-pointer hover:bg-section-hover/30 dark:hover:bg-dark-section-hover/40 group"
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
+      className="mb-10 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4 cursor-pointer group"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay }}
       onClick={() => { if (detailUrl) window.open(detailUrl, '_blank'); }}
     >
@@ -26,15 +26,7 @@ function ExperienceItem({ company, position, period, description, url, detailUrl
         <h3 className="text-xl font-medium flex items-center gap-2 group-hover:text-link-hover dark:group-hover:text-dark-link-hover">
           {position}
           {url && (
-            <a 
-              href={url} 
-              target="_blank" 
-              rel="noreferrer" 
-              className="inline-flex items-center relative z-20 group-hover:text-link-hover dark:group-hover:text-dark-link-hover"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FiExternalLink className="w-4 h-4" />
-            </a>
+            <FiExternalLink className="w-4 h-4 group-hover:text-link-hover dark:group-hover:text-dark-link-hover" />
           )}
         </h3>
         <p className="text-muted dark:text-dark-muted mb-2">
@@ -76,32 +68,26 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="mb-24 md:mb-32 p-4 rounded-lg">
+    <section id="experience" className="mb-16 md:mb-24 p-4 rounded-lg">
       <motion.h2 
         className="section-title"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
         Experiência
       </motion.h2>
       
-      <motion.div
-        className="space-y-12 mt-8"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
+      <div className="space-y-12 mt-8">
         {experiences.map((exp, index) => (
           <ExperienceItem
             key={index}
             {...exp}
-            delay={0.2 * (index + 1)}
+            delay={0.1 * index}
           />
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 } 

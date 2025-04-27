@@ -14,7 +14,7 @@ type ProjectCardProps = {
 function ProjectCard({ title, description, tags, githubUrl, liveUrl, index, projectUrl = "#" }: ProjectCardProps) {
   return (
     <motion.div 
-      className="subsection-item hover:-translate-y-2 cursor-pointer relative p-5 lg:p-6 shadow-md hover:shadow-lg bg-section-hover/30 dark:bg-dark-section-hover/40 rounded-lg border border-section-hover dark:border-dark-section-hover group"
+      className="subsection-item cursor-pointer relative p-5 lg:p-6 shadow-md border border-section-hover dark:border-dark-section-hover rounded-lg group"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -22,7 +22,12 @@ function ProjectCard({ title, description, tags, githubUrl, liveUrl, index, proj
       onClick={() => { if (projectUrl) window.open(projectUrl, '_blank'); }}
     >
       <div className="relative z-10">
-        <h3 className="text-xl font-medium mb-2 group-hover:text-link-hover dark:group-hover:text-dark-link-hover">{title}</h3>
+        <h3 className="text-xl font-medium mb-2 group-hover:text-link-hover dark:group-hover:text-dark-link-hover flex items-center gap-2">
+          {title}
+          {liveUrl && (
+            <FiExternalLink className="w-4 h-4 group-hover:text-link-hover dark:group-hover:text-dark-link-hover" />
+          )}
+        </h3>
         <p className="mb-4 text-foreground/80 dark:text-dark-foreground/90">{description}</p>
         
         <div className="flex flex-wrap gap-2 mb-4">
@@ -34,33 +39,6 @@ function ProjectCard({ title, description, tags, githubUrl, liveUrl, index, proj
               {tag}
             </span>
           ))}
-        </div>
-        
-        <div className="flex gap-3 mt-auto">
-          {githubUrl && (
-            <a 
-              href={githubUrl} 
-              target="_blank" 
-              rel="noreferrer" 
-              aria-label="GitHub repository" 
-              className="hover:text-link-hover dark:hover:text-dark-link-hover relative z-20"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FiGithub className="w-5 h-5" />
-            </a>
-          )}
-          {liveUrl && (
-            <a 
-              href={liveUrl} 
-              target="_blank" 
-              rel="noreferrer" 
-              aria-label="Live project" 
-              className="hover:text-link-hover dark:hover:text-dark-link-hover relative z-20"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FiExternalLink className="w-5 h-5" />
-            </a>
-          )}
         </div>
       </div>
       
