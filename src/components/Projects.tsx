@@ -50,33 +50,33 @@ function ProjectCard({ title, description, tags, githubUrl, liveUrl, index, proj
 export default function Projects() {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "Uma plataforma de comércio eletrônico completa com sistema de pagamento, autenticação e painel administrativo.",
-      tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+      title: "Futsallink: Aplicativo de Conexão Esportiva",
+      description: "Desenvolvimento front-end de um app para conectar clubes e jogadores de futsal, com algoritmo de matching e notificações em tempo real.",
+      tags: ["Flutter", "Firebase", "APIs REST"],
       githubUrl: "https://github.com",
       liveUrl: "https://example.com",
       projectUrl: "#"
     },
     {
-      title: "Task Manager",
-      description: "Aplicativo de gerenciamento de tarefas com recursos de arrastar e soltar, compartilhamento de equipes e notificações.",
-      tags: ["TypeScript", "React", "Firebase", "Styled Components"],
+      title: "YourDP: Sistema de Gestão de RH",
+      description: "Criação de um app multiplataforma para gestão de ponto, férias e folha de pagamento. Dashboard de analytics com integração em tempo real a APIs e cloud.",
+      tags: ["React Native", "Node.js", "Cloudinary", "Vercel"],
       githubUrl: "https://github.com",
       liveUrl: "https://example.com",
       projectUrl: "#"
     },
     {
-      title: "Portfolio Website",
-      description: "Site de portfólio responsivo e animado para apresentar projetos e habilidades de desenvolvimento web.",
-      tags: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
+      title: "Modelo Preditivo de Custos de Plano de Saúde",
+      description: "Modelo de machine learning para previsão de custos de planos de saúde com 89% de acurácia. Análise de viés e documentação técnica para uso ético de IA.",
+      tags: ["Python", "Scikit-Learn", "Pandas", "Colab"],
       githubUrl: "https://github.com",
       liveUrl: "https://example.com",
       projectUrl: "#"
     },
     {
-      title: "Weather App",
-      description: "Aplicativo de previsão do tempo que exibe informações detalhadas sobre condições climáticas atuais e futuras.",
-      tags: ["React", "OpenWeather API", "CSS Modules"],
+      title: "DoubleScout: Plataforma de Busca Avançada de Jogadores",
+      description: "Desenvolvimento de uma ferramenta web interativa para encontrar jogadores que atendem a combinações específicas de critérios. Implementação de sistema dinâmico de busca cruzada com filtros temporais e integração com múltiplas APIs esportivas.",
+      tags: ["React", "Node.js", "PostgreSQL", "TailwindCSS", "APIs esportivas"],
       githubUrl: "https://github.com",
       liveUrl: "https://example.com",
       projectUrl: "#"

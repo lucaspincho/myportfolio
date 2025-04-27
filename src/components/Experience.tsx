@@ -42,28 +42,28 @@ function ExperienceItem({ company, position, period, description, url, detailUrl
 export default function Experience() {
   const experiences = [
     {
-      company: "Tech Solutions",
-      position: "Desenvolvedor Full Stack Senior",
-      period: "2021 - Presente",
-      description: "Desenvolvimento de aplicações web usando React, TypeScript e Node.js. Liderança técnica de projetos e mentoria para desenvolvedores júnior.",
-      url: "https://example.com",
-      detailUrl: "#"
+      company: "Refinaria Abreu e Lima",
+      position: "Desenvolvedor de Aplicativo",
+      period: "Fev. 2024 - Jul. 2024",
+      description: "Desenvolvimento de um aplicativo low-code para compartilhamento de caronas entre funcionários, otimizando a mobilidade interna.",
+      url: "https://www.petrobras.com.br/quem-somos/refinaria-abreu-lima",
+      detailUrl: "https://www.petrobras.com.br/quem-somos/refinaria-abreu-lima"
     },
     {
-      company: "Web Innovate",
-      position: "Desenvolvedor Front-end",
-      period: "2018 - 2021",
-      description: "Criação de interfaces responsivas e interativas para aplicações web de grande escala. Implementação de testes automatizados e CI/CD.",
-      url: "https://example.com",
-      detailUrl: "#"
+      company: "Hospital das Clínicas - UFPE",
+      position: "Desenvolvedor de Dashboard",
+      period: "Ago. 2023 - Dez. 2023",
+      description: "Colaboração no desenvolvimento de um dashboard para agilizar solicitações de pesquisas médicas, em parceria entre Faculdade Senac PE e o hospital.",
+      url: "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hc-ufpe",
+      detailUrl: "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hc-ufpe"
     },
     {
-      company: "Digital Agency",
-      position: "Desenvolvedor Web",
-      period: "2016 - 2018",
-      description: "Desenvolvimento de sites responsivos e otimizados para SEO. Trabalho em equipe multidisciplinar com designers e especialistas em marketing.",
-      url: "https://example.com",
-      detailUrl: "#"
+      company: "Companhia do Jaleco",
+      position: "Desenvolvedor de E-commerce",
+      period: "Jan. 2020 - Fev. 2021",
+      description: "Liderança no desenvolvimento completo de uma plataforma de e-commerce utilizando WordPress, resultando em aumento significativo de vendas durante a pandemia.",
+      url: "https://linktr.ee/ciadojaleco",
+      detailUrl: "https://linktr.ee/ciadojaleco"
     },
   ];
 

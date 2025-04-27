@@ -21,20 +21,19 @@ export default function About() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <p className="text-base md:text-base lg:leading-relaxed">
-          Olá! Sou Lucas Pincho, um desenvolvedor Full Stack apaixonado por criar aplicações web modernas e acessíveis. 
-          Minha jornada na programação começou há mais de 5 anos, e desde então venho me especializando em tecnologias 
-          front-end e back-end que permitem criar experiências digitais de qualidade.
+        Sou um desenvolvedor dedicado a construir projetos que saem do papel e geram impacto real para pessoas e negócios. Me interesso especialmente pela aplicação inteligente de soluções técnicas, pela usabilidade e por como boas escolhas de interface contribuem para o produto final.
         </p>
         
         <p className="text-base md:text-base lg:leading-relaxed">
-          Atualmente, foco em React, TypeScript e Node.js como minha stack principal, mas estou sempre aberto a explorar 
-          novas tecnologias que possam melhorar a experiência do usuário e otimizar o processo de desenvolvimento.
+          Hoje, venho trilhando um caminho que mistura desenvolvimento de software e inteligência artificial. Já participei de iniciativas acadêmicas e freelancers envolvendo web, apps e soluções com IA aplicada, como o Futsallink — uma plataforma que conecta jogadores, clubes e empresários do futsal.
         </p>
         
         <p className="text-base md:text-base lg:leading-relaxed">
-          Além da programação, tenho interesse em design de UI/UX, acessibilidade web e arquitetura de software. 
-          Acredito que um bom produto digital não é apenas aquele que funciona bem, mas também aquele que é inclusivo, 
-          bonito e fácil de usar.
+          Gosto de trabalhar com ferramentas modernas, pensar em boas experiências para o usuário e colaborar em equipes com objetivos claros. Valorizo projetos bem estruturados, que exigem organização, visão de produto e adaptação constante.
+        </p>
+        
+        <p className="text-base md:text-base lg:leading-relaxed">
+          Nos momentos livres, gosto de viajar, praticar esportes e aproveitar encontros com amigos e família. Estou sempre em busca de oportunidades que unam propósito, tecnologia e aprendizado contínuo.
         </p>
       </motion.div>
     </section>

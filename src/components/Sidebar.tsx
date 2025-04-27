@@ -48,7 +48,7 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Desenvolvedor Full Stack
+          Dev + IA + Ciência de Dados
         </motion.p>
       </div>
 
@@ -96,16 +96,16 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
         transition={{ delay: 0.8 }}
       >
         <div className="flex gap-5">
-          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
+          <a href="https://github.com/lucaspincho" target="_blank" rel="noreferrer" aria-label="GitHub" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiGithub className="w-6 h-6" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
+          <a href="https://www.linkedin.com/in/lucaspincho/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiLinkedin className="w-6 h-6" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
+          <a href="https://www.instagram.com/lucas_pincho/" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiInstagram className="w-6 h-6" />
           </a>
-          <a href="mailto:exemplo@email.com" target="_blank" rel="noreferrer" aria-label="Email" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
+          <a href="mailto:lucas@pincho.com.br" target="_blank" rel="noreferrer" aria-label="Email" className="text-[#0a0e14] dark:text-dark-link hover:text-link-hover dark:hover:text-dark-link-hover">
             <FiMail className="w-6 h-6" />
           </a>
         </div>

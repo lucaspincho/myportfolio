@@ -39,18 +39,18 @@ function EducationItem({ institution, degree, period, description, detailUrl = "
 export default function Education() {
   const educationItems = [
     {
-      institution: "Universidade Federal de Tecnologia",
-      degree: "Bacharelado em Ciência da Computação",
-      period: "2014 - 2018",
-      description: "Formação completa em ciência da computação com foco em desenvolvimento de software e inteligência artificial.",
-      detailUrl: "#"
+      institution: "FIAP",
+      degree: "Pós-Graduação em Inteligência Artificial",
+      period: "Out. 2024 - Atual",
+      description: "Implementação prática de IA/ML em projetos de software, integrando ferramentas como OpenAI API, TensorFlow e PyTorch. Desenvolvimento de chatbots com LLMs, sistemas de recomendação e pipelines de dados escaláveis. Integração de IA generativa em aplicações reais.",
+      detailUrl: "https://postech.fiap.com.br/curso/ia-para-devs"
     },
     {
-      institution: "Instituto de Tecnologia Avançada",
-      degree: "Mestrado em Engenharia de Software",
-      period: "2019 - 2021",
-      description: "Pesquisa em arquiteturas de software escaláveis e metodologias ágeis de desenvolvimento.",
-      detailUrl: "#"
+      institution: "Faculdade Senac",
+      degree: "Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
+      period: "Fev. 2022 - Ago. 2024",
+      description: "Formação prática e imersiva, com foco em resolver problemas reais através da tecnologia. Durante o curso, participei de projetos que simulavam demandas do mercado, como desenvolvimento de sistemas completos, integração de APIs e colaboração em equipes multidisciplinares. Projeto Integrador: Desenvolvimento de um sistema completo em React Native e Node.JS para gestão de atividades relacionadas a recursos humanos.",
+      detailUrl: "https://faculdadesenacpe.edu.br/graduacao/analise-e-desenvolvimento-de-sistemas"
     }
   ];
 
