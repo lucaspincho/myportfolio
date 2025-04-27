@@ -7,31 +7,42 @@ type ExperienceItemProps = {
   period: string;
   description: string;
   url?: string;
+  detailUrl?: string;
   delay: number;
 };
 
-function ExperienceItem({ company, position, period, description, url, delay }: ExperienceItemProps) {
+function ExperienceItem({ company, position, period, description, url, detailUrl = "#", delay }: ExperienceItemProps) {
   return (
     <motion.div 
-      className="mb-10 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4"
+      className="mb-10 relative border-l-2 border-muted dark:border-dark-muted pl-6 pb-2 subsection-item rounded-lg p-4 cursor-pointer hover:bg-section-hover/30 dark:hover:bg-dark-section-hover/40 group"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
+      onClick={() => { if (detailUrl) window.open(detailUrl, '_blank'); }}
     >
       <div className="absolute w-4 h-4 bg-link-hover dark:bg-dark-link-hover rounded-full -left-[9px] top-5"></div>
-      <h3 className="text-xl font-medium flex items-center gap-2">
-        {position}
-        {url && (
-          <a href={url} target="_blank" rel="noreferrer" className="inline-flex items-center">
-            <FiExternalLink className="w-4 h-4" />
-          </a>
-        )}
-      </h3>
-      <p className="text-muted dark:text-dark-muted mb-2">
-        {company} | {period}
-      </p>
-      <p>{description}</p>
+      <div className="relative z-10">
+        <h3 className="text-xl font-medium flex items-center gap-2 group-hover:text-link-hover dark:group-hover:text-dark-link-hover">
+          {position}
+          {url && (
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="inline-flex items-center relative z-20 group-hover:text-link-hover dark:group-hover:text-dark-link-hover"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FiExternalLink className="w-4 h-4" />
+            </a>
+          )}
+        </h3>
+        <p className="text-muted dark:text-dark-muted mb-2">
+          {company} | {period}
+        </p>
+        <p>{description}</p>
+      </div>
+      <span className="absolute inset-0 w-full h-full opacity-0"></span>
     </motion.div>
   );
 }
@@ -44,6 +55,7 @@ export default function Experience() {
       period: "2021 - Presente",
       description: "Desenvolvimento de aplicações web usando React, TypeScript e Node.js. Liderança técnica de projetos e mentoria para desenvolvedores júnior.",
       url: "https://example.com",
+      detailUrl: "#"
     },
     {
       company: "Web Innovate",
@@ -51,6 +63,7 @@ export default function Experience() {
       period: "2018 - 2021",
       description: "Criação de interfaces responsivas e interativas para aplicações web de grande escala. Implementação de testes automatizados e CI/CD.",
       url: "https://example.com",
+      detailUrl: "#"
     },
     {
       company: "Digital Agency",
@@ -58,6 +71,7 @@ export default function Experience() {
       period: "2016 - 2018",
       description: "Desenvolvimento de sites responsivos e otimizados para SEO. Trabalho em equipe multidisciplinar com designers e especialistas em marketing.",
       url: "https://example.com",
+      detailUrl: "#"
     },
   ];
 

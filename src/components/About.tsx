@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section id="about" className="mb-24 md:mb-32 p-4 pb-4 pt-0 rounded-lg">
+    <section id="about" className="mb-24 md:mb-32 p-4 pb-4 pt-4 md:pt-6 lg:pt-8 rounded-lg">
       <motion.h2 
         className="section-title"
         initial={{ opacity: 0, y: 20 }}

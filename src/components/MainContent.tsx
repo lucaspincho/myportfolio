@@ -6,7 +6,7 @@ import Contact from './Contact';
 
 export default function MainContent() {
   return (
-    <main className="w-full py-20 lg:pt-20 transition-all">
+    <main className="w-full pt-6 md:pt-12 lg:pt-16 transition-all">
       <div className="w-full pl-0 md:pl-4">
         <About />
         <Experience />

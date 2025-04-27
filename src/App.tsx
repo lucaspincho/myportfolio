@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import useTheme from './hooks/useTheme'
 import ThemeToggle from './components/ThemeToggle'
+import ResumeButton from './components/ResumeButton'
 import Sidebar from './components/Sidebar'
 import MainContent from './components/MainContent'
 import CursorGlow from './components/CursorGlow'
@@ -34,11 +35,9 @@ function App() {
         darkColor="#38BDF8" 
       />
 
-      <div className="sticky top-0 z-30 w-full bg-background dark:bg-dark-background">
-        <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-16 xl:px-20 py-2">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-        </div>
-      </div>
+      {/* Botões movidos para posição absoluta sem a barra superior */}
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <ResumeButton />
       
       <div className="flex-1 w-full px-6 md:px-10 lg:px-16 xl:px-20 relative">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 max-w-6xl mx-auto">

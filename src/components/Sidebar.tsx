@@ -90,23 +90,23 @@ export default function Sidebar({ isMobile, mobileMenuOpen, toggleMobileMenu }: 
       </nav>
 
       <motion.div 
-        className="mt-8"
+        className="mt-24"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
-        <div className="flex gap-4">
+        <div className="flex gap-5">
           <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <FiGithub className="w-5 h-5" />
+            <FiGithub className="w-6 h-6" />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <FiLinkedin className="w-5 h-5" />
+            <FiLinkedin className="w-6 h-6" />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <FiInstagram className="w-5 h-5" />
+            <FiInstagram className="w-6 h-6" />
           </a>
           <a href="mailto:exemplo@email.com" target="_blank" rel="noreferrer" aria-label="Email">
-            <FiMail className="w-5 h-5" />
+            <FiMail className="w-6 h-6" />
           </a>
         </div>
       </motion.div>
