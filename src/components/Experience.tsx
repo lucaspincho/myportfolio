@@ -43,17 +43,17 @@ export default function Experience() {
   const experiences = [
     {
       company: "Refinaria Abreu e Lima",
-      position: "Desenvolvedor de Aplicativo",
+      position: "Desenvolvedor de Aplicação Corporativa Interna",
       period: "Fev. 2024 - Jul. 2024",
-      description: "Desenvolvimento de um aplicativo low-code para compartilhamento de caronas entre funcionários, otimizando a mobilidade interna.",
+      description: "Desenvolvimento de um aplicativo low-code para compartilhamento de caronas entre os colaboradores da Refinaria Abreu e Lima, otimizando a mobilidade interna.",
       url: "https://www.petrobras.com.br/quem-somos/refinaria-abreu-lima",
       detailUrl: "https://www.petrobras.com.br/quem-somos/refinaria-abreu-lima"
     },
     {
       company: "Hospital das Clínicas - UFPE",
-      position: "Desenvolvedor de Dashboard",
+      position: "Analista de Dados",
       period: "Ago. 2023 - Dez. 2023",
-      description: "Colaboração no desenvolvimento de um dashboard para agilizar solicitações de pesquisas médicas, em parceria entre Faculdade Senac PE e o hospital.",
+      description: "Colaboração na análise dos dados e no desenvolvimento de um dashboard personalizado para agilizar solicitações de pesquisas médicas, em parceria entre Faculdade Senac PE e o Hospital das Clínicas da UFPE.",
       url: "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hc-ufpe",
       detailUrl: "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-nordeste/hc-ufpe"
     },

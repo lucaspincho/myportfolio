@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 
 type ProjectCardProps = {
   title: string;
   description: string;
   tags: string[];
-  githubUrl?: string;
-  liveUrl?: string;
+  githubUrl?: string | null;
+  liveUrl?: string | null;
   index: number;
   projectUrl?: string; // URL para o projeto completo
 };
 
-function ProjectCard({ title, description, tags, githubUrl, liveUrl, index, projectUrl = "#" }: ProjectCardProps) {
+function ProjectCard({ title, description, tags, liveUrl, index, projectUrl = "#" }: ProjectCardProps) {
   return (
     <motion.div 
       className="subsection-item cursor-pointer relative p-5 lg:p-6 shadow-md border border-section-hover dark:border-dark-section-hover rounded-lg group"
@@ -51,7 +51,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Futsallink: Aplicativo de Conexão Esportiva",
-      description: "Desenvolvimento front-end de um app para conectar clubes e jogadores de futsal, com algoritmo de matching e notificações em tempo real.",
+      description: "App para facilitar a conexão entre clubes e jogadores de futsal, com seletivas virtuais, filtros por característica, algoritmo de matching e notificações em tempo real.",
       tags: ["Flutter", "Firebase", "APIs REST"],
       githubUrl: "https://github.com/lucaspincho/Futsallink",
       liveUrl: "https://github.com/lucaspincho/Futsallink",
@@ -59,7 +59,7 @@ export default function Projects() {
     },
     {
       title: "YourDP: Sistema de Gestão de RH",
-      description: "Criação de um app multiplataforma para gestão de ponto, férias e folha de pagamento. Dashboard de analytics com integração em tempo real a APIs e cloud.",
+      description: "Sistema com um app multiplataforma para gestão de ponto, férias e folha de pagamento ligado em um Dashboard de analytics com integração em tempo real a APIs e cloud.",
       tags: ["React Native", "Node.js", "Cloudinary", "Vercel"],
       githubUrl: "https://github.com/Caliel-Albuquerque/ReactNative-YourDP",
       liveUrl: "https://github.com/Caliel-Albuquerque/ReactNative-YourDP",
@@ -67,7 +67,7 @@ export default function Projects() {
     },
     {
       title: "Modelo Preditivo de Custos de Plano de Saúde",
-      description: "Modelo de machine learning para previsão de custos de planos de saúde com 89% de acurácia. Análise de viés e documentação técnica para uso ético de IA.",
+      description: "Modelo de machine learning para previsão de custos de planos de saúde com 89% de acurácia. Análise de viés e documentação técnica para o uso ético da Inteligência Artificial.",
       tags: ["Python", "Scikit-Learn", "Pandas", "Colab"],
       githubUrl: "https://colab.research.google.com/drive/1qr0fzQpBSzOY9Ut6O5i2fUYFnVTXNHBM?usp=sharing",
       liveUrl: "https://colab.research.google.com/drive/1qr0fzQpBSzOY9Ut6O5i2fUYFnVTXNHBM?usp=sharing",
@@ -75,7 +75,7 @@ export default function Projects() {
     },
     {
       title: "DoubleScout: Plataforma de Busca Avançada de Jogadores",
-      description: "Desenvolvimento de uma ferramenta web interativa para encontrar jogadores que atendem a combinações específicas de critérios. Implementação de sistema dinâmico de busca cruzada com filtros temporais e integração com múltiplas APIs esportivas.",
+      description: "Ferramenta web interativa para encontrar jogadores de futebol que atendem a combinações específicas de critérios. Implementação de sistema dinâmico de busca cruzada com filtros temporais e integração com múltiplas APIs esportivas.",
       tags: ["React", "Node.js", "PostgreSQL", "TailwindCSS", "APIs esportivas"],
       githubUrl: null,
       liveUrl: null,
