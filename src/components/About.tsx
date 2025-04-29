@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
+  
   return (
     <section id="about" className="mb-16 md:mb-24 p-4 pb-4 pt-4 md:pt-6 lg:pt-8 rounded-lg">
       <motion.h2 
@@ -10,7 +13,7 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        Sobre
+        {t('about.title')}
       </motion.h2>
       
       <motion.div
@@ -21,19 +24,40 @@ export default function About() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <p className="text-base md:text-base lg:leading-relaxed">
-        Sou um desenvolvedor dedicado a construir projetos que saem do papel e geram impacto real para pessoas e negócios. Me interesso especialmente pela aplicação inteligente de soluções técnicas, pela usabilidade e por como boas escolhas de interface contribuem para o produto final.
+          <Trans 
+            i18nKey="about.paragraph1"
+            components={{
+              bold: <span className="font-bold hover:text-link-hover dark:hover:text-dark-link-hover transition-colors duration-300" />
+            }}
+          />
         </p>
         
         <p className="text-base md:text-base lg:leading-relaxed">
-          Hoje, venho trilhando um caminho que mistura desenvolvimento de software e inteligência artificial. Já participei de iniciativas acadêmicas e freelancers envolvendo web, apps e soluções com IA aplicada, como o Futsallink — uma plataforma que conecta jogadores, clubes e empresários do futsal.
+          <Trans 
+            i18nKey="about.paragraph2"
+            components={{
+              bold: <span className="font-bold hover:text-link-hover dark:hover:text-dark-link-hover transition-colors duration-300" />,
+              futsallink: <a href="https://github.com/lucaspincho/Futsallink" target="_blank" rel="noopener noreferrer" className="font-bold text-[#38BDF8] dark:text-[#38BDF8] hover:underline">Futsallink</a>
+            }}
+          />
         </p>
         
         <p className="text-base md:text-base lg:leading-relaxed">
-          Gosto de trabalhar com ferramentas modernas, pensar em boas experiências para o usuário e colaborar em equipes com objetivos claros. Valorizo projetos bem estruturados, que exigem organização, visão de produto e adaptação constante.
+          <Trans 
+            i18nKey="about.paragraph3"
+            components={{
+              bold: <span className="font-bold hover:text-link-hover dark:hover:text-dark-link-hover transition-colors duration-300" />
+            }}
+          />
         </p>
         
         <p className="text-base md:text-base lg:leading-relaxed">
-          Nos momentos livres, gosto de viajar, praticar esportes e aproveitar encontros com amigos e família. Estou sempre em busca de oportunidades que unam propósito, tecnologia e aprendizado contínuo.
+          <Trans 
+            i18nKey="about.paragraph4"
+            components={{
+              bold: <span className="font-bold hover:text-link-hover dark:hover:text-dark-link-hover transition-colors duration-300" />
+            }}
+          />
         </p>
       </motion.div>
     </section>

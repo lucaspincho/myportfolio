@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FiSend } from 'react-icons/fi';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -10,6 +11,7 @@ export default function Contact() {
     success: boolean;
     message: string;
   } | null>(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +36,7 @@ export default function Contact() {
       
       setSubmitStatus({
         success: true,
-        message: 'Mensagem enviada com sucesso! Entrarei em contato em breve.'
+        message: t('contact.success')
       });
       
       // Limpar o formulário
@@ -43,7 +45,7 @@ export default function Contact() {
       console.error('Erro ao enviar mensagem:', error);
       setSubmitStatus({
         success: false,
-        message: 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato diretamente por e-mail.'
+        message: t('contact.error')
       });
     } finally {
       setIsSubmitting(false);
@@ -59,7 +61,7 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        Contato
+        {t('contact.title')}
       </motion.h2>
       
       <motion.div
@@ -70,9 +72,12 @@ export default function Contact() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <p className="text-base">
-          Estou sempre aberto para discutir novos projetos, oportunidades de trabalho ou parcerias.
-          Seja para uma conversa rápida ou para discutir um projeto em detalhes, preencha o formulário
-          abaixo ou entre em contato diretamente através do meu email: <a href="mailto:lucas@pincho.com.br" className="text-link-hover dark:text-dark-link-hover hover:underline">lucas@pincho.com.br</a>.
+          <Trans 
+            i18nKey="contact.description"
+            components={{
+              email: <a href="mailto:lucas@pincho.com.br" className="text-link-hover dark:text-dark-link-hover hover:underline" />
+            }}
+          />
         </p>
         
         {submitStatus && (
@@ -83,36 +88,36 @@ export default function Contact() {
         
         <form ref={formRef} onSubmit={handleSubmit} className="mt-8 space-y-5 max-w-xl">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-2">Nome</label>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">{t('contact.form.name')}</label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Seu nome"
+              placeholder={t('contact.form.namePlaceholder')}
               className="w-full p-3 rounded-lg form-input border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300"
               required
             />
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">{t('contact.form.email')}</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="seu.email@exemplo.com"
+              placeholder={t('contact.form.emailPlaceholder')}
               className="w-full p-3 rounded-lg form-input border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300"
               required
             />
           </div>
           
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-2">Mensagem</label>
+            <label htmlFor="message" className="block text-sm font-medium mb-2">{t('contact.form.message')}</label>
             <textarea
               id="message"
               name="message"
               rows={5}
-              placeholder="Sua mensagem..."
+              placeholder={t('contact.form.messagePlaceholder')}
               className="w-full p-3 rounded-lg form-input border border-muted dark:border-dark-muted focus:ring-2 focus:ring-link-hover dark:focus:ring-dark-link-hover outline-none transition-colors duration-300 resize-none"
               required
             ></textarea>
@@ -128,7 +133,7 @@ export default function Contact() {
             whileTap={{ scale: 0.98 }}
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Enviando...' : 'Enviar mensagem'} <FiSend className="w-4 h-4" />
+            {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')} <FiSend className="w-4 h-4" />
           </motion.button>
         </form>
       </motion.div>

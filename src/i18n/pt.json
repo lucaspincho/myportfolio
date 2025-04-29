@@ -1,0 +1,67 @@
+{
+  "sidebar": {
+    "title": "Lucas Pincho",
+    "subtitle": "Dev + IA + Ciência de Dados",
+    "navigation": {
+      "about": "Sobre",
+      "experience": "Experiência",
+      "projects": "Projetos",
+      "education": "Educação",
+      "contact": "Contato"
+    }
+  },
+  "about": {
+    "title": "Sobre",
+    "paragraph1": "Sou um desenvolvedor dedicado a construir projetos que saem do papel e geram impacto real para pessoas e negócios. Me interesso especialmente pela <bold>aplicação inteligente</bold> de soluções técnicas, pela usabilidade e por como boas escolhas de interface contribuem para o produto final.",
+    "paragraph2": "Hoje, venho trilhando um caminho que mistura <bold>análise e desenvolvimento de software</bold> e <bold>inteligência artificial</bold>. Já participei de iniciativas acadêmicas e freelancers envolvendo web, apps e soluções com <bold>IA aplicada</bold>, como o <futsallink>Futsallink</futsallink> — uma plataforma que conecta jogadores e clubes do futsal.",
+    "paragraph3": "Gosto de trabalhar com ferramentas modernas, pensar em boas experiências para o usuário e colaborar em equipes com objetivos claros. Valorizo projetos bem estruturados, que exigem organização, visão de produto e adaptação constante.",
+    "paragraph4": "Nos momentos livres, gosto de viajar, praticar esportes e aproveitar encontros com amigos e família. Estou sempre em busca de oportunidades que unam propósito, tecnologia e aprendizado contínuo."
+  },
+  "experience": {
+    "title": "Experiência",
+    "positions": {
+      "position1": {
+        "title": "Analista de Sistemas",
+        "company": "Empresa XYZ",
+        "period": "Jan 2023 - Presente",
+        "description": "Desenvolvimento e manutenção de sistemas internos, implementação de novas funcionalidades e melhorias em sistemas legados."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "project1": {
+      "title": "FutsalLink",
+      "description": "Plataforma que conecta jogadores e clubes de futsal.",
+      "technologies": ["React", "Node.js", "MongoDB"]
+    }
+  },
+  "education": {
+    "title": "Educação",
+    "education1": {
+      "degree": "Bacharelado em Ciência da Computação",
+      "institution": "Universidade XYZ",
+      "period": "2018 - 2022"
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Estou sempre aberto para discutir novos projetos, oportunidades de trabalho ou parcerias. Seja para uma conversa rápida ou para discutir um projeto em detalhes, fala comigo por aqui ou no e-mail(<email>lucas@pincho.com.br</email>). Vai ser um prazer trocar uma ideia!💬",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "message": "Mensagem",
+      "namePlaceholder": "Seu nome",
+      "emailPlaceholder": "seu.email@exemplo.com",
+      "messagePlaceholder": "Sua mensagem...",
+      "submit": "Enviar mensagem",
+      "submitting": "Enviando..."
+    },
+    "success": "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+    "error": "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato diretamente por e-mail."
+  },
+  "common": {
+    "language": "Idioma",
+    "downloadResume": "Download CV"
+  }
+} 

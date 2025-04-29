@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
+import { useMemo } from 'react';
 
 type EducationItemProps = {
   institution: string;
@@ -37,22 +39,45 @@ function EducationItem({ institution, degree, period, description, detailUrl = "
 }
 
 export default function Education() {
-  const educationItems = [
-    {
-      institution: "FIAP",
-      degree: "Pós-Graduação em Inteligência Artificial",
-      period: "Out. 2024 - Atual",
-      description: "Implementação prática de IA/ML em projetos de software, integrando ferramentas como OpenAI API, TensorFlow e PyTorch. Desenvolvimento de chatbots com LLMs, sistemas de recomendação e pipelines de dados escaláveis. Integração de IA generativa em aplicações reais.",
-      detailUrl: "https://postech.fiap.com.br/curso/ia-para-devs"
-    },
-    {
-      institution: "Faculdade Senac",
-      degree: "Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
-      period: "Fev. 2022 - Ago. 2024",
-      description: "Formação prática e imersiva, com foco em resolver problemas reais através da tecnologia. Durante o curso, participei de projetos que simulavam demandas do mercado, como desenvolvimento de sistemas completos, integração de APIs e colaboração em equipes multidisciplinares. Projeto Integrador: Desenvolvimento de um sistema completo em React Native e Node.JS para gestão de atividades relacionadas a recursos humanos.",
-      detailUrl: "https://faculdadesenacpe.edu.br/graduacao/analise-e-desenvolvimento-de-sistemas"
-    }
-  ];
+  const { t, i18n } = useTranslation();
+  
+  const educationData = useMemo(() => {
+    const ptEducation = [
+      {
+        institution: "FIAP",
+        degree: "Pós-Graduação em Inteligência Artificial",
+        period: "Out. 2024 - Atual",
+        description: "Implementação prática de IA/ML em projetos de software, integrando ferramentas como OpenAI API, TensorFlow e PyTorch. Desenvolvimento de chatbots com LLMs, sistemas de recomendação e pipelines de dados escaláveis. Integração de IA generativa em aplicações reais.",
+        detailUrl: "https://postech.fiap.com.br/curso/ia-para-devs"
+      },
+      {
+        institution: "Faculdade Senac",
+        degree: "Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
+        period: "Fev. 2022 - Ago. 2024",
+        description: "Formação prática e imersiva, com foco em resolver problemas reais através da tecnologia. Durante o curso, participei de projetos que simulavam demandas do mercado, como desenvolvimento de sistemas completos, integração de APIs e colaboração em equipes multidisciplinares. Projeto Integrador: Desenvolvimento de um sistema completo em React Native e Node.JS para gestão de atividades relacionadas a recursos humanos.",
+        detailUrl: "https://faculdadesenacpe.edu.br/graduacao/analise-e-desenvolvimento-de-sistemas"
+      }
+    ];
+    
+    const enEducation = [
+      {
+        institution: "FIAP",
+        degree: "Postgraduate in Artificial Intelligence",
+        period: "Oct. 2024 - Present",
+        description: "Practical implementation of AI/ML in software projects, integrating tools such as OpenAI API, TensorFlow, and PyTorch. Development of chatbots with LLMs, recommendation systems, and scalable data pipelines. Integration of generative AI in real-world applications.",
+        detailUrl: "https://postech.fiap.com.br/curso/ia-para-devs"
+      },
+      {
+        institution: "Senac College",
+        degree: "Associate Degree in Systems Analysis and Development",
+        period: "Feb. 2022 - Aug. 2024",
+        description: "Practical and immersive education focused on solving real problems through technology. During the course, I participated in projects that simulated market demands, such as complete system development, API integration, and collaboration in multidisciplinary teams. Capstone Project: Development of a complete system in React Native and Node.JS for managing human resources activities.",
+        detailUrl: "https://faculdadesenacpe.edu.br/graduacao/analise-e-desenvolvimento-de-sistemas"
+      }
+    ];
+    
+    return i18n.language === 'pt' ? ptEducation : enEducation;
+  }, [i18n.language]);
 
   return (
     <section id="education" className="mb-16 md:mb-24 p-4 rounded-lg">
@@ -63,11 +88,11 @@ export default function Education() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        Educação
+        {t('education.title')}
       </motion.h2>
       
       <div className="mt-8">
-        {educationItems.map((item, index) => (
+        {educationData.map((item, index) => (
           <EducationItem
             key={index}
             {...item}

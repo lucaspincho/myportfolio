@@ -1,75 +1,126 @@
-# Portfólio de Lucas Pincho
+# 🚀 Lucas Pincho's Portfolio
 
-Site de portfólio pessoal inspirado no design de [Brittany Chiang](https://brittanychiang.com).
+A modern and responsive personal portfolio developed with the latest React ecosystem technologies.
 
-## 🚀 Stack
+*[Versão em Português](README.pt.md)*
 
-- TypeScript
-- React
-- Vite
-- Tailwind CSS
-- Framer Motion
-- React Icons
-- classnames
+![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-6.3.1-646CFF?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.3-38B2AC?logo=tailwindcss)
 
-## 🎨 Design e Layout
+## ✨ Features
 
-O site possui uma estrutura de layout dividida:
-- **Sidebar esquerda (48%)**: Fixa com informações pessoais e navegação
-- **Conteúdo direito (52%)**: Rolável com seções detalhadas
+- **Responsive Design**: Optimized experience for desktop and mobile devices
+- **Light/Dark Mode**: Theme toggle with localStorage persistence
+- **Custom Cursor Effect**: Glow effect that follows the cursor
+- **Smooth Animations**: Component transitions and animations with Framer Motion
+- **Contact Form**: EmailJS integration for sending messages
+- **Intuitive Navigation**: Smooth scrolling between sections
+- **Split Layout**: Fixed sidebar and scrollable content for better experience
 
-Implementa temas claro e escuro com alternância e persistência via localStorage.
+## 💻 Technologies
 
-## 🛠️ Instalação
+- **Core**:
+  - React 19
+  - TypeScript
+  - Vite 6
+
+- **Styling**:
+  - Tailwind CSS
+  - classnames (for conditional class composition)
+
+- **Animations and UI**:
+  - Framer Motion (animations and transitions)
+  - React Icons (icon library)
+
+- **Functionality**:
+  - EmailJS (contact form integration)
+
+## 🔧 Installation and Usage
 
 ```bash
-# Clonar o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+# Clone the repository
+git clone https://github.com/lucaspincho/myportfolio.git
 
-# Entrar no diretório
+# Navigate to the directory
 cd myportfolio
 
-# Instalar dependências
+# Install dependencies
 npm install
 
-# Iniciar servidor de desenvolvimento
+# Start development server
 npm run dev
 ```
 
-## 📦 Build e Deploy
+## 📦 Build and Deploy
 
 ```bash
-# Gerar build de produção
+# Generate production build
 npm run build
 
-# Visualizar build localmente
+# Preview build locally
 npm run preview
 ```
 
-Este projeto está configurado para fácil deploy no Vercel.
+## 🌐 Deployment Options
 
-## 🧩 Estrutura do Projeto
+### Vercel (Recommended)
+1. Import your GitHub project to Vercel
+2. Configure custom domain in: Settings > Domains
+3. Configure DNS records as instructed (usually a CNAME record)
+
+### Netlify
+1. Import your repository to Netlify
+2. Configure domain in: Site Settings > Domain > Custom Domains
+3. Configure DNS records following the instructions
+
+### GitHub Pages with Custom Domain
+1. Configure base URL in vite.config.ts file:
+```typescript
+export default defineConfig({
+  plugins: [react()],
+  base: '/', // Use '/myportfolio/' if not using a custom domain
+})
+```
+2. Create a CNAME file in the public folder with your domain
+3. Configure DNS records as instructed by GitHub
+
+## 📁 Project Structure
 
 ```
 /
-├── public/          # Arquivos públicos
-├── src/             # Código fonte
-│   ├── assets/      # Recursos estáticos 
-│   ├── components/  # Componentes React
-│   ├── hooks/       # Custom hooks
-│   ├── App.tsx      # Componente principal
-│   ├── main.tsx     # Ponto de entrada
-│   └── index.css    # Estilos globais
-└── ...              # Arquivos de configuração
+├── public/             # Static files
+├── src/                # Source code
+│   ├── assets/         # Images and resources
+│   ├── components/     # React components
+│   │   ├── About.tsx       # About section
+│   │   ├── Contact.tsx     # Contact form
+│   │   ├── CursorGlow.tsx  # Custom cursor effect
+│   │   ├── Education.tsx   # Education background
+│   │   ├── Experience.tsx  # Professional experience
+│   │   ├── MainContent.tsx # Main content
+│   │   ├── Projects.tsx    # Featured projects
+│   │   ├── ResumeButton.tsx # Resume button
+│   │   ├── Sidebar.tsx     # Sidebar
+│   │   └── ThemeToggle.tsx # Theme switcher
+│   ├── hooks/          # Custom hooks
+│   ├── App.tsx         # Root component
+│   ├── main.tsx        # Entry point
+│   └── index.css       # Global styles and Tailwind
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-## 🎯 Funcionalidades
+## 🤝 Contributions
 
-- Design responsivo para desktop e mobile
-- Alternância entre temas claro e escuro
-- Animações suaves com Framer Motion
-- Navegação por âncoras com rolagem suave
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-## 📝 Licença
+## 📄 License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).

@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { FiFileText } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 export default function ResumeButton() {
+  const { t } = useTranslation();
+  
   const openResume = () => {
     window.open('/CV.pdf', '_blank');
   };
@@ -15,8 +18,8 @@ export default function ResumeButton() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      aria-label="Visualizar currículo"
-      title="Visualizar currículo"
+      aria-label={t('common.downloadResume')}
+      title={t('common.downloadResume')}
     >
       <FiFileText className="text-link-hover dark:text-dark-link-hover w-5 h-5" />
     </motion.button>

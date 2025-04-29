@@ -5,6 +5,7 @@ import ResumeButton from './components/ResumeButton'
 import Sidebar from './components/Sidebar'
 import MainContent from './components/MainContent'
 import CursorGlow from './components/CursorGlow'
+import LanguageToggle from './components/LanguageToggle'
 
 function App() {
   const { theme, toggleTheme } = useTheme()
@@ -37,6 +38,7 @@ function App() {
       {/* Botões movidos para posição absoluta sem a barra superior */}
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       <ResumeButton />
+      <LanguageToggle />
       
       <div className="flex-1 w-full px-6 md:px-10 lg:px-16 xl:px-20 relative">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 max-w-6xl mx-auto">

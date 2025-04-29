@@ -1,0 +1,67 @@
+{
+  "sidebar": {
+    "title": "Lucas Pincho",
+    "subtitle": "Dev + AI + Data Science",
+    "navigation": {
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "education": "Education",
+      "contact": "Contact"
+    }
+  },
+  "about": {
+    "title": "About",
+    "paragraph1": "I'm a developer dedicated to building projects that come to life and generate real impact for people and businesses. I'm particularly interested in the <bold>intelligent application</bold> of technical solutions, usability, and how good interface choices contribute to the final product.",
+    "paragraph2": "Today, I'm following a path that combines <bold>software analysis and development</bold> and <bold>artificial intelligence</bold>. I've participated in academic and freelance initiatives involving web, apps, and solutions with <bold>applied AI</bold>, such as <futsallink>Futsallink</futsallink> — a platform that connects futsal players and clubs.",
+    "paragraph3": "I enjoy working with modern tools, thinking about good user experiences, and collaborating in teams with clear objectives. I value well-structured projects that require organization, product vision, and constant adaptation.",
+    "paragraph4": "In my free time, I enjoy traveling, practicing sports, and spending time with friends and family. I'm always looking for opportunities that combine purpose, technology, and continuous learning."
+  },
+  "experience": {
+    "title": "Experience",
+    "positions": {
+      "position1": {
+        "title": "Systems Analyst",
+        "company": "XYZ Company",
+        "period": "Jan 2023 - Present",
+        "description": "Development and maintenance of internal systems, implementation of new features and improvements to legacy systems."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "project1": {
+      "title": "FutsalLink",
+      "description": "Platform that connects futsal players and clubs.",
+      "technologies": ["React", "Node.js", "MongoDB"]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "education1": {
+      "degree": "Bachelor of Computer Science",
+      "institution": "XYZ University",
+      "period": "2018 - 2022"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "I'm always open to discussing new projects, work opportunities, or partnerships. Whether for a quick chat or to discuss a project in detail, reach out to me here or via email at (<email>lucas@pincho.com.br</email>). I'd love to chat!💬",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your.email@example.com",
+      "messagePlaceholder": "Your message...",
+      "submit": "Send message",
+      "submitting": "Sending..."
+    },
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "There was an error sending your message. Please try again or contact me directly by email."
+  },
+  "common": {
+    "language": "Language",
+    "downloadResume": "Download Resume"
+  }
+} 

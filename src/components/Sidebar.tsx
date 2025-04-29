@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import classNames from 'classnames';
 import { useActiveSection } from '../hooks/useActiveSection';
+import { useTranslation } from 'react-i18next';
 
 type SidebarProps = {
   isMobile: boolean;
@@ -11,13 +12,14 @@ type SidebarProps = {
 
 export default function Sidebar({ isMobile }: SidebarProps) {
   const activeSection = useActiveSection();
+  const { t } = useTranslation();
 
   const navItems = [
-    { label: 'Sobre', href: '#about' },
-    { label: 'Experiência', href: '#experience' },
-    { label: 'Projetos', href: '#projects' },
-    { label: 'Educação', href: '#education' },
-    { label: 'Contato', href: '#contact' },
+    { label: t('sidebar.navigation.about'), href: '#about' },
+    { label: t('sidebar.navigation.experience'), href: '#experience' },
+    { label: t('sidebar.navigation.projects'), href: '#projects' },
+    { label: t('sidebar.navigation.education'), href: '#education' },
+    { label: t('sidebar.navigation.contact'), href: '#contact' },
   ];
 
   const linksContainerClass = classNames({
@@ -35,7 +37,7 @@ export default function Sidebar({ isMobile }: SidebarProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          Lucas Pincho
+          {t('sidebar.title')}
         </motion.h1>
         <motion.p 
           className="text-muted dark:text-dark-muted mt-3 text-lg"
@@ -43,7 +45,7 @@ export default function Sidebar({ isMobile }: SidebarProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Dev + IA + Ciência de Dados
+          {t('sidebar.subtitle')}
         </motion.p>
       </div>
 
