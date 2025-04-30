@@ -66,7 +66,7 @@ export default function Experience() {
         company: "Companhia do Jaleco",
         position: "Desenvolvedor de E-commerce",
         period: "Jan. 2020 - Fev. 2021",
-        description: "Liderança no desenvolvimento completo de uma plataforma de e-commerce utilizando WordPress, resultando em aumento significativo de vendas durante a pandemia.",
+        description: "Desenvolvimento completo de uma plataforma de e-commerce utilizando WordPress, resultando em aumento significativo de vendas durante a pandemia.",
         url: "https://linktr.ee/ciadojaleco",
         detailUrl: "https://linktr.ee/ciadojaleco"
       }
