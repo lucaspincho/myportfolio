@@ -75,7 +75,8 @@ export default function Contact() {
           <Trans 
             i18nKey="contact.description"
             components={{
-              email: <a href="mailto:lucas@pincho.com.br" className="text-link-hover dark:text-dark-link-hover hover:underline" />
+              email: <a href="mailto:lucas@pincho.com.br" className="text-link-hover dark:text-dark-link-hover hover:underline" />,
+              br: <br />
             }}
           />
         </p>

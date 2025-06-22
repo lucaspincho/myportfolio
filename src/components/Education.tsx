@@ -51,7 +51,7 @@ export default function Education() {
         detailUrl: "https://postech.fiap.com.br/curso/ia-para-devs"
       },
       {
-        institution: "Faculdade Senac",
+        institution: "Faculdade Senac PE",
         degree: "Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
         period: "Fev. 2022 - Ago. 2024",
         description: "Formação prática e imersiva, com foco em resolver problemas reais através da tecnologia. Participação em projetos que simulavam demandas do mercado, como desenvolvimento de sistemas completos, integração de APIs e colaboração em equipes multidisciplinares. Projeto Integrador: desenvolvimento de um sistema completo em React Native e Node.JS para gestão de atividades relacionadas a recursos humanos.",

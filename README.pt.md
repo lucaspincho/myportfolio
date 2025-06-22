@@ -94,7 +94,7 @@ export default defineConfig({
 ├── src/                # Código fonte
 │   ├── assets/         # Imagens e recursos
 │   ├── components/     # Componentes React
-│   │   ├── About.tsx       # Seção Sobre
+│   │   ├── About.tsx       # Seção Sobre mim
 │   │   ├── Contact.tsx     # Formulário de contato
 │   │   ├── CursorGlow.tsx  # Efeito de cursor personalizado
 │   │   ├── Education.tsx   # Formação acadêmica

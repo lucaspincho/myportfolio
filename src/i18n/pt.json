@@ -3,7 +3,7 @@
     "title": "Lucas Pincho",
     "subtitle": "Dev + IA + Ciência de Dados",
     "navigation": {
-      "about": "Sobre",
+      "about": "Sobre mim",
       "experience": "Experiência",
       "projects": "Projetos",
       "education": "Educação",
@@ -11,7 +11,7 @@
     }
   },
   "about": {
-    "title": "Sobre",
+    "title": "Sobre mim",
     "paragraph1": "Sou um desenvolvedor dedicado a construir projetos que saem do papel e geram impacto real para pessoas e negócios. Me interesso especialmente pela <bold>aplicação inteligente</bold> de soluções técnicas, pela usabilidade e por boas escolhas de interface que elevem a qualidade do produto final.",
     "paragraph2": "Hoje, venho trilhando um caminho que mistura <bold>análise e desenvolvimento de software</bold> e <bold>inteligência artificial</bold>. Já participei de iniciativas acadêmicas e atuei como freelancer em projetos de web, apps e soluções com <bold>IA aplicada</bold>, como o <futsallink>Futsallink</futsallink> — uma plataforma que conecta jogadores e clubes do futsal.",
     "paragraph3": "Gosto de trabalhar com ferramentas modernas, pensar em boas experiências para o usuário e colaborar em equipes com objetivos claros. Valorizo projetos bem estruturados, que exigem organização, visão de produto e adaptação constante.",
@@ -46,7 +46,7 @@
   },
   "contact": {
     "title": "Contato",
-    "description": "Estou sempre aberto para discutir novos projetos, oportunidades de trabalho ou parcerias. Seja para uma conversa rápida ou para discutir um projeto em detalhes, fala comigo por aqui ou no e-mail <email>lucas@pincho.com.br</email>. Vai ser um prazer trocar uma ideia!💬",
+    "description": "Estou sempre aberto para discutir novos projetos, oportunidades de trabalho ou parcerias. Seja para uma conversa rápida ou para discutir um projeto em detalhes, fala comigo por aqui ou através do e-mail <email>lucas@pincho.com.br</email>. <br/>Vai ser um prazer trocar uma ideia! 💬",
     "form": {
       "name": "Nome",
       "email": "Email",

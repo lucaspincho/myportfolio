@@ -23,14 +23,14 @@ export default function Sidebar({ isMobile }: SidebarProps) {
   ];
 
   const linksContainerClass = classNames({
-    'flex gap-6': true,
+    'flex gap-4': true,
     'flex-col mt-8': !isMobile,
     'flex-row flex-wrap justify-center mt-4': isMobile,
   });
 
   const sidebarContent = (
     <div className={`flex flex-col ${isMobile ? 'h-auto' : 'h-full'}`}>
-      <div className={`${isMobile ? 'mb-4 text-center' : 'mb-10 lg:pt-10'}`}>
+      <div className={`${isMobile ? 'mb-4 text-center' : 'mb-6 lg:pt-10'}`}>
         <motion.h1 
           className={`${isMobile ? 'text-2xl' : 'text-3xl md:text-4xl lg:text-5xl'} font-bold tracking-tight`}
           initial={{ opacity: 0 }}
@@ -49,6 +49,24 @@ export default function Sidebar({ isMobile }: SidebarProps) {
         </motion.p>
       </div>
 
+      {/* Foto de perfil - apenas no desktop */}
+      {!isMobile && (
+        <motion.div
+          className="flex justify-start mb-3"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
+        >
+          <div className="w-32 h-32 lg:w-44 lg:h-44 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-4 border-heading dark:border-dark-heading hover:border-link-hover dark:hover:border-dark-link-hover">
+            <img 
+              src="/images/profile.JPEG" 
+              alt="Lucas Pincho"
+              className="w-full h-full object-cover scale-150"
+            />
+          </div>
+        </motion.div>
+      )}
+
       {!isMobile && (
         <nav className={`${isMobile ? 'flex justify-center' : ''}`}>
           <ul className={linksContainerClass}>
@@ -60,7 +78,7 @@ export default function Sidebar({ isMobile }: SidebarProps) {
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * (index + 3) }}
+                  transition={{ delay: 0.1 * (index + 5) }}
                   className="w-fit"
                 >
                   <a 
@@ -88,7 +106,7 @@ export default function Sidebar({ isMobile }: SidebarProps) {
       )}
 
       <motion.div 
-        className={`${isMobile ? 'mt-8 flex justify-center' : 'mt-24'}`}
+        className={`${isMobile ? 'mt-8 flex justify-center' : 'mt-9'}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
